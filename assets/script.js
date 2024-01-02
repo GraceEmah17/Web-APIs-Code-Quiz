@@ -70,5 +70,13 @@ function checkAnswer(selectedChoice) {
     }
   }
 
+  // Function to display feedback (correct or wrong)
+function displayFeedback(isCorrect) {
+    const feedbackElement = document.createElement("div");
+    feedbackElement.textContent = isCorrect ? "Correct!" : "Wrong!";
+    feedbackElement.classList.add(isCorrect ? "correct" : "wrong");
+    choicesContainer.appendChild(feedbackElement);
+  }
+
 
       
