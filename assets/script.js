@@ -34,5 +34,19 @@ function startQuiz() {
     startTimer();
   }
 
+  // Function to display a question and its choices
+function showQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+    questionContainer.textContent = currentQuestion.question;
   
+    choicesContainer.innerHTML = "";
+    currentQuestion.choices.forEach((choice, index) => {
+      const button = document.createElement("button");
+      button.textContent = choice;
+      button.addEventListener("click", () => checkAnswer(choice));
+      choicesContainer.appendChild(button);
+    });
+  }
+
+
       
