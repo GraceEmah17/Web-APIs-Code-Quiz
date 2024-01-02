@@ -27,4 +27,12 @@ const choicesContainer = document.getElementById("choices-container");
 const nextBtn = document.getElementById("next-btn");
 const timeElement = document.getElementById("time");
 const scoreElement = document.getElementById("score");
+
+// Function to start the quiz
+function startQuiz() {
+    showQuestion();
+    startTimer();
+  }
+
+  
       
