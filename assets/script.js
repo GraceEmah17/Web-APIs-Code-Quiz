@@ -12,3 +12,12 @@ const questions = [
         correctAnswer: "JavaScript",
       },
       
+  // Add more questions as needed
+];
+
+// Quiz state variables
+let currentQuestionIndex = 0;
+let score = 0;
+let time = 60;
+let timerInterval;
+      
