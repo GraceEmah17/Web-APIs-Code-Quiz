@@ -97,5 +97,18 @@ function startTimer() {
     }, 1000);
   }
 
+  // Function to end the quiz and display the final score
+function endQuiz() {
+    clearInterval(timerInterval);
+    questionContainer.textContent = "Quiz Completed!";
+    choicesContainer.innerHTML = "";
+    nextBtn.style.display = "none";
+    scoreElement.textContent = `Your final Score: ${score} / ${questions.length}`;
+  }
+
+  // Start the quiz when the page loads
+startQuiz();
+
+
 
       
