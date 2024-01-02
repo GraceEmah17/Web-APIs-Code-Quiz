@@ -9,10 +9,12 @@ Link to repo
 Link to URL
 Screenshot of my quiz Web APIs Code Quiz
 
-[link to deployed account](          )
+[link to deployed account](           )
 
-[link to github Web-APIs-Code-Quiz](            )
+[link to github Web-APIs-Code-Quiz](https://github.com/GraceEmah17/Web-APIs-Code-Quiz.git)
 
-![screenshot of Web-APIs-Code-Quiz](       )
+![screenshot of Web-APIs-Code-Quiz](./assets/Images/screenshot%20pg1.png)
 
-![screenshot of Web-APIs-Code-Quiz](        )
+![screenshot of Web-APIs-Code-Quiz](./assets/Images/screenshot%20questions.png)
+
+![screenshot of Web-APIs-Code-Quiz]( ./assets/Images/screenshot%20results.png)
