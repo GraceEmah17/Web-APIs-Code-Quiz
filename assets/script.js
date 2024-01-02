@@ -5,37 +5,35 @@ const questions = [
       choices: ["Berlin", "Madrid", "Paris", "Rome"],
       correctAnswer: "Paris",
     },
-
     {
-        question: "Which programming language is this quiz written in?",
-        choices: ["Java", "Python", "JavaScript", "C++"],
-        correctAnswer: "JavaScript",
-      },
-      
-  // Add more questions as needed
-];
-
-// Quiz state variables
-let currentQuestionIndex = 0;
-let score = 0;
-let time = 60;
-let timerInterval;
-
-// DOM elements
-const questionContainer = document.getElementById("question-container");
-const choicesContainer = document.getElementById("choices-container");
-const nextBtn = document.getElementById("next-btn");
-const timeElement = document.getElementById("time");
-const scoreElement = document.getElementById("score");
-
-// Function to start the quiz
-function startQuiz() {
+      question: "Which programming language is this quiz written in?",
+      choices: ["Java", "Python", "JavaScript", "C++"],
+      correctAnswer: "JavaScript",
+    },
+    // Add more questions as needed
+  ];
+  
+  // Quiz state variables
+  let currentQuestionIndex = 0;
+  let score = 0;
+  let time = 60;
+  let timerInterval;
+  
+  // DOM elements
+  const questionContainer = document.getElementById("question-container");
+  const choicesContainer = document.getElementById("choices-container");
+  const nextBtn = document.getElementById("next-btn");
+  const timeElement = document.getElementById("time");
+  const scoreElement = document.getElementById("score");
+  
+  // Function to start the quiz
+  function startQuiz() {
     showQuestion();
     startTimer();
   }
-
+  
   // Function to display a question and its choices
-function showQuestion() {
+  function showQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     questionContainer.textContent = currentQuestion.question;
   
@@ -47,9 +45,9 @@ function showQuestion() {
       choicesContainer.appendChild(button);
     });
   }
-
+  
   // Function to check the selected answer
-function checkAnswer(selectedChoice) {
+  function checkAnswer(selectedChoice) {
     const currentQuestion = questions[currentQuestionIndex];
     const isCorrect = selectedChoice === currentQuestion.correctAnswer;
   
@@ -69,25 +67,25 @@ function checkAnswer(selectedChoice) {
       endQuiz();
     }
   }
-
+  
   // Function to display feedback (correct or wrong)
-function displayFeedback(isCorrect) {
+  function displayFeedback(isCorrect) {
     const feedbackElement = document.createElement("div");
     feedbackElement.textContent = isCorrect ? "Correct!" : "Wrong!";
     feedbackElement.classList.add(isCorrect ? "correct" : "wrong");
     choicesContainer.appendChild(feedbackElement);
   }
-
+  
   // Function to reset the feedback element
-function resetFeedback() {
+  function resetFeedback() {
     const feedbackElement = choicesContainer.querySelector(".correct, .wrong");
     if (feedbackElement) {
       feedbackElement.remove();
     }
   }
-
+  
   // Function to start the timer
-function startTimer() {
+  function startTimer() {
     timerInterval = setInterval(() => {
       time--;
       timeElement.textContent = time;
@@ -96,19 +94,16 @@ function startTimer() {
       }
     }, 1000);
   }
-
+  
   // Function to end the quiz and display the final score
-function endQuiz() {
+  function endQuiz() {
     clearInterval(timerInterval);
     questionContainer.textContent = "Quiz Completed!";
     choicesContainer.innerHTML = "";
     nextBtn.style.display = "none";
     scoreElement.textContent = `Your final Score: ${score} / ${questions.length}`;
   }
-
+  
   // Start the quiz when the page loads
-startQuiz();
-
-
-
-      
+  startQuiz();
+  
