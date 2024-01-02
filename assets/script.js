@@ -5,6 +5,7 @@ const questions = [
       choices: ["Berlin", "Madrid", "Paris", "Rome"],
       correctAnswer: "Paris",
     },
+
     {
       question: "Which programming language is this quiz written in?",
       choices: ["Java", "Python", "JavaScript", "C++"],
@@ -17,6 +18,17 @@ const questions = [
       correctAnswer: "html",
     },
 
+    {
+      question: "what is the link between html and css?",
+      choices: ["JavaScript", "readme", "asset","link rel", "others"],
+      correctAnswer: "link rel",
+    },
+
+    {
+      question: "why do we use JavaScript"?
+      choices: ["beautify", "functionality", "webpage", "others"],
+      correctAnswer:"functionality",
+    },
 
     // Add more questions as needed
   ];
@@ -111,8 +123,6 @@ const questions = [
     nextBtn.style.display = "none";
     scoreElement.textContent = `Your final Score: ${score} / ${questions.length}`;
   }
-  
-  
   
   // Start the quiz when the page loads
   startQuiz();
