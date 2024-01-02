@@ -48,5 +48,27 @@ function showQuestion() {
     });
   }
 
+  // Function to check the selected answer
+function checkAnswer(selectedChoice) {
+    const currentQuestion = questions[currentQuestionIndex];
+    const isCorrect = selectedChoice === currentQuestion.correctAnswer;
+  
+    if (isCorrect) {
+      score++;
+    }
+  
+    displayFeedback(isCorrect);
+  
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+      setTimeout(() => {
+        showQuestion();
+        resetFeedback();
+      }, 1000); // Delay for 1 second before showing the next question
+    } else {
+      endQuiz();
+    }
+  }
+
 
       
