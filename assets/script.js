@@ -6,4 +6,9 @@ const questions = [
       correctAnswer: "Paris",
     },
 
-    
+    {
+        question: "Which programming language is this quiz written in?",
+        choices: ["Java", "Python", "JavaScript", "C++"],
+        correctAnswer: "JavaScript",
+      },
+      
