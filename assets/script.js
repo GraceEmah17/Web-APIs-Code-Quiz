@@ -20,4 +20,11 @@ let currentQuestionIndex = 0;
 let score = 0;
 let time = 60;
 let timerInterval;
+
+// DOM elements
+const questionContainer = document.getElementById("question-container");
+const choicesContainer = document.getElementById("choices-container");
+const nextBtn = document.getElementById("next-btn");
+const timeElement = document.getElementById("time");
+const scoreElement = document.getElementById("score");
       
