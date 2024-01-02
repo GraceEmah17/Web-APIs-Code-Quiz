@@ -10,6 +10,14 @@ const questions = [
       choices: ["Java", "Python", "JavaScript", "C++"],
       correctAnswer: "JavaScript",
     },
+
+    {
+      question: "which of the following is a programming language?",
+      choices: ["html", "microsoft", "microsoft excel", "website"],
+      correctAnswer: "html",
+    },
+
+
     // Add more questions as needed
   ];
   
@@ -103,6 +111,8 @@ const questions = [
     nextBtn.style.display = "none";
     scoreElement.textContent = `Your final Score: ${score} / ${questions.length}`;
   }
+  
+  
   
   // Start the quiz when the page loads
   startQuiz();
