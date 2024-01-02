@@ -25,7 +25,7 @@ const questions = [
     },
 
     {
-      question: "why do we use JavaScript"?
+      question: "why do we use JavaScript?",
       choices: ["beautify", "functionality", "webpage", "others"],
       correctAnswer:"functionality",
     },
