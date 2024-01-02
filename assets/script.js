@@ -86,5 +86,16 @@ function resetFeedback() {
     }
   }
 
+  // Function to start the timer
+function startTimer() {
+    timerInterval = setInterval(() => {
+      time--;
+      timeElement.textContent = time;
+      if (time <= 0) {
+        endQuiz();
+      }
+    }, 1000);
+  }
+
 
       
