@@ -43,6 +43,16 @@ button:hover {
   background-color: #8570a5;
 }
 
+.wrapper {
+  margin: 100px auto 0 auto;
+  max-width: 600px;
+}
+.scores {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
 .choices button {
   display: block;
 }
