@@ -78,5 +78,13 @@ function displayFeedback(isCorrect) {
     choicesContainer.appendChild(feedbackElement);
   }
 
+  // Function to reset the feedback element
+function resetFeedback() {
+    const feedbackElement = choicesContainer.querySelector(".correct, .wrong");
+    if (feedbackElement) {
+      feedbackElement.remove();
+    }
+  }
+
 
       
